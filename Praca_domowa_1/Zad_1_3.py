@@ -4,7 +4,7 @@
 wzrost = float(input(f"Podaj wzrost w cm: "))
 masa = float(input(f"Podaj masę w kg: "))
 
-bmi = masa/wzrost/wzrost*100*100
+bmi = masa/wzrost**2*100**2
 
 print(f"Twój współczynnik BMI wynosi: {bmi:.2f}.")
 
