@@ -7,5 +7,6 @@ bok_c = input(f"Podaj bok c: ")
 try:
     wynik = pole_trojkata(float(bok_a), float(bok_b), float(bok_c))
     print(f"Pole trójkąta o bokach {bok_a}, {bok_b} i {bok_c} to {wynik}.")
+
 except ValueError:
     print(f"Coś poszło nie tak. Z takich boków nie zbuduję trójkąta.")
