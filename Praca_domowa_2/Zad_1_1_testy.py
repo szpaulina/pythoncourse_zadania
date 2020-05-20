@@ -2,6 +2,7 @@ import pytest
 
 def stopy_na_metry(stopy: float) -> float:
     """
+    Czy to się złączy?
     Funkcja przelicza stopy na metry
     :param stopy: wartość w stopach
     :return: wartość w metrach
@@ -12,7 +13,7 @@ def stopy_na_metry(stopy: float) -> float:
     elif stopy < 0:
         raise ValueError("Podałeś ujemną liczbę stóp.")
 
-    wynik = stopy * 0.4048
+    wynik = stopy * 0.3048
     return wynik
 
 
