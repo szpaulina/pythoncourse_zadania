@@ -13,7 +13,7 @@ def stopy_na_metry(stopy: float) -> float:
     elif stopy < 0:
         raise ValueError("Podałeś ujemną liczbę stóp.")
 
-    wynik = stopy * 0.3048
+    wynik = stopy * 0.4048
     return wynik
 
 
