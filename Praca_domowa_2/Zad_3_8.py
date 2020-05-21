@@ -5,10 +5,7 @@ def ile_wiekszych(lista: list, liczba_x: float) -> float:
     :param liczba_x: liczba, od której większe liczby funkcja ma zliczyc
     :return: liczba liczb większych od x
     """
-    if not isinstance(lista, list):
-        raise TypeError
-
-    if not (type(liczba_x) == float or type(liczba_x) == int):
+    if not (isinstance(lista, list) and (type(liczba_x) == float or type(liczba_x) == int)):
         raise TypeError
 
     wynik = 0

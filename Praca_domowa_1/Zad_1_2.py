@@ -5,9 +5,13 @@
 #Jeśli tak będzie ci wygodniej, możesz założyć, że naprawa butów nigdy nie będzie trwała dłużej niż siedem dni."""
 
 dzien_tyg = int(input(f"Podaj dzień tygodnia, w którym oddałeś buty (1 - poniedziałek, 2 - wtorek itp.): "))
-czas = int(input(f"Podaj, ile dni będzie trwała naprawa: "))
 
-dzien_odbioru = (dzien_tyg + czas ) % 7
+if dzien_tyg > 7 or dzien_tyg < 0:
+    print("Niepoprawny dzień tygodnia.")
+    exit()
+else:
+    czas = int(input(f"Podaj, ile dni będzie trwała naprawa: "))
+    dzien_odbioru = (dzien_tyg + czas) % 7
 
 if dzien_odbioru == 1:
     print(f"Odbierzesz buty w poniedziałek.")

@@ -1,6 +1,7 @@
 import pytest
 import math
 
+
 def pole_kola(promien: float) -> float:
     """
     Funkcja oblicza pole koła przy zadanym promieniu
@@ -13,9 +14,10 @@ def pole_kola(promien: float) -> float:
     elif promien < 0:
         raise ValueError("Podałeś ujemną liczbę.")
 
-    wynik = round(math.pi*promien**2, 2)
+    wynik = round(math.pi * promien ** 2, 2)
 
     return wynik
+
 
 def test_zly_argument():
     with pytest.raises(TypeError):

@@ -6,10 +6,7 @@ def pierwsza_podzielna(lista: list, liczba_x: float) -> float:
     :param liczba_x: liczba, przez którą pierwszą podzielną liczbę funkcja ma wypisać
     :return: pierwsza liczba podzieln przez x
     """
-    if not isinstance(lista, list):
-        raise TypeError
-
-    if not (type(liczba_x) == float or type(liczba_x) == int):
+    if not (isinstance(lista, list) and (type(liczba_x) == float or type(liczba_x) == int)):
         raise TypeError
 
     for element in lista:

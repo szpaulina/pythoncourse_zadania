@@ -14,6 +14,3 @@ def daj_maks(lista: list) -> float:
             znalezione_maksimum = element
 
     return znalezione_maksimum
-
-liczby = [10,2000,30,40]
-print(daj_maks(liczby))
