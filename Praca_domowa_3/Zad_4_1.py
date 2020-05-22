@@ -1,5 +1,5 @@
 class Ogloszenie:
-    def __init__(self, tytul, przedmiot: str, opis_przedmiotu: str, stan_przedmiotu: str, cena: float, dane_kontaktowe: str):
+    def __init__(self, tytul: str, przedmiot: str, opis_przedmiotu: str, stan_przedmiotu: str, cena: float, dane_kontaktowe: str):
         self.tytul = tytul
         self.przedmiot = przedmiot
         self.opis_przedmiotu = opis_przedmiotu
@@ -21,4 +21,4 @@ class Ogloszenie:
         print(self.prepare_advertisement())
 
 p1 = Ogloszenie("Sprzedam", "bluzka", "czerwona w kropki","nienoszona", 20.5, "tel: 3334444555")
-p1.print_advertisement()
+
