@@ -34,24 +34,34 @@ class PlanszaXO:
                f"----- \n"
 
     def stan_gry(self):
-        if (self.list[6] == self.list[4] == self.list[2]) or (self.list[0] == self.list[4] == self.list[8]) or (self.list[7] == self.list[4] == self.list[1]) or (self.list[3] == self.list[4] == self.list[5]):
-            if self.list[4] == "x" and self.list[4] != " ":
+        if ((self.list[6] == self.list[4] == self.list[2]) or (self.list[0] == self.list[4] == self.list[8]) or (self.list[7] == self.list[4] == self.list[1]) or (self.list[3] == self.list[4] == self.list[5])) and self.list[4] != " ":
+            if self.list[4] == "x":
                 return f"Wygrana krzyżyków."
-            elif self.list[4] == "o" and self.list[4] != " ":
+            elif self.list[4] == "o":
                 return f"Wygrana kółek."
-            else:
-                return f"Gra w trakcie"
-        elif (self.list[6] == self.list[3] == self.list[0]) or (self.list[6] == self.list[7] == self.list[8]):
-            if self.list[6] == "x" and self.list[6] != " ":
+        elif ((self.list[6] == self.list[3] == self.list[0]) or (self.list[6] == self.list[7] == self.list[8])) and self.list[6] != " ":
+            if self.list[6] == "x":
                 return f"Wygrana krzyżyków."
-            elif self.list[6] == "o" and self.list[6] != " ":
+            elif self.list[6] == "o":
                 return f"Wygrana kółek."
-            else:
-                return f"Gra w trakcie"
-        elif (self.list[0] == self.list[1] == self.list[2]) or (self.list[2] == self.list[5] == self.list[8]):
-            if self.list[2] == "x" and self.list[2] != " ":
+        elif ((self.list[0] == self.list[1] == self.list[2]) or (self.list[2] == self.list[5] == self.list[8])) and self.list[2] != " ":
+            if self.list[2] == "x":
                 return f"Wygrana krzyżyków."
-            elif self.list[2] == "o" and self.list[2] != " ":
+            elif self.list[2] == "o":
                 return f"Wygrana kółek."
-            else:
-                return f"Gra w trakcie"
+        else:
+            return f"Gra w trakcie."
+
+z = PlanszaXO()
+z.dodaj_element(1, 1, "x")
+z.dodaj_element(1, 2, "o")
+print(z.stan_gry())
+z.dodaj_element(2, 1, "x")
+print(z.stan_gry())
+z.dodaj_element(2, 2, "o")
+z.dodaj_element(3, 1, "x")
+print(z)
+print(z.stan_gry())
+z.dodaj_element(3, 2, "o")
+print(z)
+print(z.stan_gry())
