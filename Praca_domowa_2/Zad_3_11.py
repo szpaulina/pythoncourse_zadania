@@ -5,10 +5,7 @@ def znajdz_wspolny(lista1: list, lista2: list) -> float:
     :param liczba_x: liczba, przez którą pierwszą podzielną liczbę funkcja ma wypisać
     :return: pierwsza liczba podzieln przez x
     """
-    if not isinstance(lista1, list):
-        raise TypeError
-
-    if not isinstance(lista2, list):
+    if not (isinstance(lista1, list) and isinstance(lista2, list)):
         raise TypeError
 
     wynik = None

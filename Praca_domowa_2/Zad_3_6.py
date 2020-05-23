@@ -5,10 +5,7 @@ def pierwsza_wieksza(lista: list, liczba_x: float) -> float:
     :param liczba_x: liczba, od której pierwszą większą liczbę funkcja ma wypisać
     :return: pierwsza liczba większa od x lub None
     """
-    if not isinstance(lista, list):
-        raise TypeError
-
-    if not (type(liczba_x) == float or type(liczba_x) == int):
+    if not (isinstance(lista, list) and (type(liczba_x) == float or type(liczba_x) == int)):
         raise TypeError
 
     for element in lista:
