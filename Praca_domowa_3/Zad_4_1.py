@@ -17,8 +17,9 @@ class Ogloszenie:
     def __str__(self):
         return self.prepare_advertisement()
 
-    def print_advertisement(self) -> str:
+    def print_advertisement(self):
         print(self.prepare_advertisement())
 
 p1 = Ogloszenie("Sprzedam", "bluzka", "czerwona w kropki","nienoszona", 20.5, "tel: 3334444555")
+print(p1)
 

@@ -1,3 +1,5 @@
+import pytest
+
 class Zbiornik:
     def __init__(self, ilosc_wody=0):
         self.ilosc_wody = ilosc_wody
@@ -10,8 +12,7 @@ class Zbiornik:
 
     def odlej(self, ile: float):
         if ile > self.ilosc_wody:
-            self.ilosc_wody = 0
-            self.temp_zbiornika = 0
+            raise ValueError("Nie możesz odlać więcej niż jest w zbiorniku.")
         else:
             self.ilosc_wody -= ile
 
@@ -20,3 +21,20 @@ class Zbiornik:
 
     def __str__(self):
         return self.opis()
+
+def test_dolewka():
+    b = Zbiornik()
+    b.dolej(5, 20)
+    b.dolej(5, 10)
+    assert b.opis() == "Zbiornik z 10 litrami wody o temperaturze 15.0 st Celsjusza."
+
+def test_Salomona():
+    b = Zbiornik()
+    with pytest.raises(ValueError):
+        b.odlej(5)
+
+def test_odlej_wiecej_niz_dolales():
+    b = Zbiornik()
+    b.dolej(3, 10)
+    with pytest.raises(ValueError):
+        b.odlej(5)
